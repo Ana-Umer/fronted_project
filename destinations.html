@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinations – GeoTour</title>
+  <meta name="description" content="Browse all tourist destinations on GeoTour — parks, lakes, cultural sites, beaches, and mountains in Ethiopia with detailed descriptions and location information." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">🗺️</span>
+      <span>Geo<span>Tour</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="destinations.html" class="active">Destinations</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Destinations</div>
+    <h1>Explore Destinations</h1>
+    <p>Discover stunning tourist locations in Ethiopia — from spectacular mountains to ancient cultural sites and pristine lakes.</p>
+  </div>
+
+  <!-- ── DESTINATIONS ── -->
+  <section>
+    <div class="filter-bar fade-in">
+      <button class="filter-btn active" data-filter="all">🌍 All</button>
+      <button class="filter-btn" data-filter="park">🌿 Parks</button>
+      <button class="filter-btn" data-filter="lake">💧 Lakes</button>
+      <button class="filter-btn" data-filter="cultural">🏛️ Cultural</button>
+      <button class="filter-btn" data-filter="beach">🏖️ Beaches</button>
+      <button class="filter-btn" data-filter="mountain">🏔️ Mountains</button>
+    </div>
+
+    <div class="destinations-page-grid">
+
+      <!-- Mountain -->
+      <div class="dest-card dest-filter-card fade-in" data-category="mountain">
+        <div class="dest-card-img" style="background:linear-gradient(135deg,#1e293b,#374151);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:5rem;">🏔️</span>
+          <span class="dest-badge">🏔️ Mountain</span>
+          <span class="dest-rating">⭐ 4.9</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Simien Mountains</h3>
+          <div class="dest-card-location">📍 Northern Ethiopia | 🌐 13.1492°N, 38.0371°E</div>
+          <p class="dest-card-desc">A dramatic landscape of deep valleys and jagged mountain peaks, offering world-class trekking routes and encounters with the endemic Gelada baboons.</p>
+          <div class="dest-card-footer">
+            <a href="map.html" class="dest-link">View on Map →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">Best: Sep–Nov</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lake -->
+      <div class="dest-card dest-filter-card fade-in" data-category="lake">
+        <div class="dest-card-img" style="background:linear-gradient(135deg,#0e4f7f,#06b6d4);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:5rem;">🚣</span>
+          <span class="dest-badge">💧 Lake</span>
+          <span class="dest-rating">⭐ 4.8</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Lake Tana</h3>
+          <div class="dest-card-location">📍 Amhara, Ethiopia | 🌐 12.0000°N, 37.3000°E</div>
+          <p class="dest-card-desc">The source of the Blue Nile and the largest lake in Ethiopia, famous for its ancient island monasteries dating back centuries.</p>
+          <div class="dest-card-footer">
+            <a href="map.html" class="dest-link">View on Map →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">Best: Sep–Jan</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Park -->
+      <div class="dest-card dest-filter-card fade-in" data-category="park">
+        <div class="dest-card-img" style="background:linear-gradient(135deg,#064e3b,#065840);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:5rem;">🛖</span>
+          <span class="dest-badge">🌿 National Park</span>
+          <span class="dest-rating">⭐ 5.0</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Omo Valley</h3>
+          <div class="dest-card-location">📍 Southern Ethiopia | 🌐 5.8647°N, 35.6033°E</div>
+          <p class="dest-card-desc">A culturally diverse region known for its indigenous tribes, unique traditions, and pristine natural landscapes along the Omo River.</p>
+          <div class="dest-card-footer">
+            <a href="map.html" class="dest-link">View on Map →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">Best: Jun–Sep</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cultural -->
+      <div class="dest-card dest-filter-card fade-in" data-category="cultural">
+        <div class="dest-card-img">
+          <img src="images/destination_temple.png" alt="Lalibela Rock-Hewn Churches" style="width:100%;height:100%;object-fit:cover;" />
+          <span class="dest-badge">🏛️ Cultural Site</span>
+          <span class="dest-rating">⭐ 5.0</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Lalibela Rock-Hewn Churches</h3>
+          <div class="dest-card-location">📍 Amhara, Ethiopia | 🌐 12.0315°N, 39.0411°E</div>
+          <p class="dest-card-desc">A UNESCO World Heritage Site featuring 11 medieval monolithic cave churches carved out of solid rock in the 12th century.</p>
+          <div class="dest-card-footer">
+            <a href="map.html" class="dest-link">View on Map →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">Open year-round</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Park -->
+      <div class="dest-card dest-filter-card fade-in" data-category="park">
+        <div class="dest-card-img" style="background:linear-gradient(135deg,#713f12,#92400e);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:5rem;">🌋</span>
+          <span class="dest-badge">🌿 Park</span>
+          <span class="dest-rating">⭐ 4.7</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Danakil Depression</h3>
+          <div class="dest-card-location">📍 Afar, Ethiopia | 🌐 14.2417°N, 40.3000°E</div>
+          <p class="dest-card-desc">One of the hottest and lowest places on Earth, featuring neon-colored sulfuric springs, salt flats, and active volcanoes.</p>
+          <div class="dest-card-footer">
+            <a href="map.html" class="dest-link">View on Map →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">Best: Nov–Mar</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beach -->
+      <div class="dest-card dest-filter-card fade-in" data-category="beach">
+        <div class="dest-card-img" style="background:linear-gradient(135deg,#4c1d95,#7c3aed);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:5rem;">🏖️</span>
+          <span class="dest-badge">🏖️ Beach</span>
+          <span class="dest-rating">⭐ 4.6</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Langano Beach</h3>
+          <div class="dest-card-location">📍 Oromia, Ethiopia | 🌐 7.6000°N, 38.7167°E</div>
+          <p class="dest-card-desc">A popular resort lake with brown, mineral-rich waters and sandy beaches, uniquely free of bilharzia and safe for swimming.</p>
+          <div class="dest-card-footer">
+            <a href="map.html" class="dest-link">View on Map →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">Best: Oct–May</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mountain -->
+      <div class="dest-card dest-filter-card fade-in" data-category="mountain">
+        <div class="dest-card-img" style="background:linear-gradient(135deg,#0a4a35,#0a7c5c);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:5rem;">🐺</span>
+          <span class="dest-badge">🏔️ Mountain</span>
+          <span class="dest-rating">⭐ 4.8</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Bale Mountains</h3>
+          <div class="dest-card-location">📍 Oromia, Ethiopia | 🌐 6.8833°N, 39.8167°E</div>
+          <p class="dest-card-desc">A vast high-altitude plateau and forest, home to the rare Ethiopian wolf, mountain nyala, and incredible endemic bird species.</p>
+          <div class="dest-card-footer">
+            <a href="map.html" class="dest-link">View on Map →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">Best: Nov–Feb</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cultural -->
+      <div class="dest-card dest-filter-card fade-in" data-category="cultural">
+        <div class="dest-card-img" style="background:linear-gradient(135deg,#92400e,#f59e0b);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:5rem;">🏰</span>
+          <span class="dest-badge">🏛️ Cultural</span>
+          <span class="dest-rating">⭐ 4.9</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Fasil Ghebbi, Gondar</h3>
+          <div class="dest-card-location">📍 Amhara, Ethiopia | 🌐 12.6075°N, 37.4697°E</div>
+          <p class="dest-card-desc">A fortress-city of royal castles and palaces built by emperors in the 17th century, often referred to as the Camelot of Africa.</p>
+          <div class="dest-card-footer">
+            <a href="map.html" class="dest-link">View on Map →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">Open daily</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Park / Cave -->
+      <div class="dest-card dest-filter-card fade-in" data-category="park">
+        <div class="dest-card-img" style="background:linear-gradient(135deg,#0a4a35,#065840);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:5rem;">🦇</span>
+          <span class="dest-badge">🌿 Park / Cave</span>
+          <span class="dest-rating">⭐ 4.8</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Sof Omar Cave</h3>
+          <div class="dest-card-location">📍 Bale, Ethiopia | 🌐 6.9038°N, 40.7511°E</div>
+          <p class="dest-card-desc">One of the most spectacular and extensive underground cave systems in the world, carved by the Weyib River.</p>
+          <div class="dest-card-footer">
+            <a href="map.html" class="dest-link">View on Map →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">Best: Nov–Feb</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mountain -->
+      <div class="dest-card dest-filter-card fade-in" data-category="mountain">
+        <div class="dest-card-img" style="background:linear-gradient(135deg,#1e293b,#374151);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:5rem;">🏔️</span>
+          <span class="dest-badge">🏔️ Mountain</span>
+          <span class="dest-rating">⭐ 4.7</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Gara Muleta</h3>
+          <div class="dest-card-location">📍 Oromia, Ethiopia | 🌐 9.2500°N, 41.7333°E</div>
+          <p class="dest-card-desc">A prominent mountain in eastern Ethiopia known for its rich biodiversity, indigenous forests, and stunning panoramic views.</p>
+          <div class="dest-card-footer">
+            <a href="map.html" class="dest-link">View on Map →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">Best: Sep–Nov</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand" style="margin-bottom:1rem;">
+          <span class="brand-icon">🗺️</span>
+          <span style="color:#fff;">Geo<span style="color:var(--primary-light);">Tour</span></span>
+        </div>
+        <p>Your GIS-powered travel companion. Explore, discover, and plan unforgettable journeys.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="destinations.html">🌿 National Parks</a></li>
+          <li><a href="destinations.html">💧 Lakes & Rivers</a></li>
+          <li><a href="destinations.html">🏛️ Cultural Sites</a></li>
+          <li><a href="destinations.html">🏖️ Beaches</a></li>
+          <li><a href="destinations.html">🏔️ Mountains</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@geotour.com">📧 info@geotour.com</a></li>
+          <li><a href="tel:+251900000000">📞 +251 900 000 000</a></li>
+          <li><a href="#">📍 Addis Ababa, Ethiopia</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GeoTour. Built with ❤️ using HTML, CSS & JavaScript | GIS-Based Tourism Project.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

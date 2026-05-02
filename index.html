@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoTour – GIS-Based Tourism Information</title>
+  <meta name="description" content="Explore Ethiopia's most breathtaking tourist destinations with GeoTour – your GIS-powered travel guide featuring interactive maps, destination guides, and travel tips." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">🗺️</span>
+      <span>Geo<span>Tour</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="images/hero_banner.png" alt="Tourism destination aerial view" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🌍 GIS-Powered Travel Guide</div>
+      <h1 class="hero-title">
+        Discover Ethiopia's<br />
+        <span class="highlight">Most Stunning</span><br />
+        Destinations
+      </h1>
+      <p class="hero-desc">
+        Explore tourist destinations using interactive maps, rich imagery, and curated travel information — all powered by Geographic Information System technology.
+      </p>
+      <div class="hero-buttons">
+        <a href="destinations.html" class="btn-primary">🏔️ Explore Destinations</a>
+        <a href="map.html" class="btn-outline">🗺️ Open Interactive Map</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number" data-target="120" data-suffix="+">0+</div>
+          <div class="stat-label">Destinations</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="12" data-suffix="+">0+</div>
+          <div class="stat-label">Regions</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="98" data-suffix="%">0%</div>
+          <div class="stat-label">Happy Travelers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="24" data-suffix="/7">0/7</div>
+          <div class="stat-label">Support</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-dot"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ── FEATURED DESTINATIONS ── -->
+  <section id="featured">
+    <div class="section-header fade-in">
+      <div class="section-tag">✨ Featured</div>
+      <h2 class="section-title">Top Tourist Destinations</h2>
+      <p class="section-desc">Hand-picked locations offering unforgettable experiences for every type of traveler.</p>
+    </div>
+    <div class="destinations-grid">
+
+      <div class="dest-card fade-in">
+        <div class="dest-card-img">
+          <img src="images/destination_temple.png" alt="Lalibela Rock-Hewn Churches" />
+          <span class="dest-badge">🏛️ Cultural Site</span>
+          <span class="dest-rating">⭐ 4.9</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Lalibela Rock-Hewn Churches</h3>
+          <div class="dest-card-location">📍 Amhara, Ethiopia</div>
+          <p class="dest-card-desc">Step back in time at these magnificent 12th-century monolithic rock-cut churches hidden deep in the Ethiopian highlands, a marvel of ancient engineering.</p>
+          <div class="dest-card-footer">
+            <a href="destinations.html" class="dest-link">Explore →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">2–5 day visit</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dest-card fade-in">
+        <div class="dest-card-img" style="background:linear-gradient(135deg,#0a4a35,#06b6d4);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:6rem;">🏔️</span>
+          <span class="dest-badge">🏔️ Mountain</span>
+          <span class="dest-rating">⭐ 4.8</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Simien Mountains</h3>
+          <div class="dest-card-location">📍 Northern Ethiopia</div>
+          <p class="dest-card-desc">A dramatic landscape of deep valleys and jagged mountain peaks, offering world-class trekking routes and encounters with the endemic Gelada baboons.</p>
+          <div class="dest-card-footer">
+            <a href="destinations.html" class="dest-link">Explore →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">3–7 day trek</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dest-card fade-in">
+        <div class="dest-card-img" style="background:linear-gradient(135deg,#065840,#0ea5e9);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:6rem;">🛖</span>
+          <span class="dest-badge">🌿 Cultural/Park</span>
+          <span class="dest-rating">⭐ 5.0</span>
+        </div>
+        <div class="dest-card-body">
+          <h3 class="dest-card-title">Omo Valley</h3>
+          <div class="dest-card-location">📍 Southern Ethiopia</div>
+          <p class="dest-card-desc">Witness the spectacular cultural diversity of indigenous tribes, and encounter pristine natural habitats along the great Omo River.</p>
+          <div class="dest-card-footer">
+            <a href="destinations.html" class="dest-link">Explore →</a>
+            <span style="font-size:0.82rem;color:var(--text-light);">3–5 day trip</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;" class="fade-in">
+      <a href="destinations.html" class="btn-primary" style="display:inline-flex;">🌍 View All Destinations</a>
+    </div>
+  </section>
+
+  <!-- ── ABOUT TEASER ── -->
+  <section style="background:var(--light);">
+    <div class="about-teaser">
+      <div class="about-image-wrap fade-in">
+        <img src="images/hero_banner.png" alt="Tourism overview" />
+        <div class="about-badge-float">
+          <span class="big">5★</span>
+          <span class="small">Travel Experience</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-header fade-in">
+          <div class="section-tag">🗺️ About GeoTour</div>
+          <h2 class="section-title">Your GIS-Powered<br/>Travel Companion</h2>
+          <p class="section-desc">We combine cutting-edge Geographic Information System technology with rich tourism content to help you plan your perfect trip in Ethiopia.</p>
+        </div>
+        <div class="about-features fade-in">
+          <div class="about-feature-item">
+            <div class="feature-icon">🗺️</div>
+            <div class="feature-text">
+              <h4>Interactive GIS Maps</h4>
+              <p>Explore destinations on live interactive maps with precise coordinates and location data.</p>
+            </div>
+          </div>
+          <div class="about-feature-item">
+            <div class="feature-icon">📸</div>
+            <div class="feature-text">
+              <h4>Rich Visual Content</h4>
+              <p>High-quality imagery and detailed descriptions for every destination we feature.</p>
+            </div>
+          </div>
+          <div class="about-feature-item">
+            <div class="feature-icon">📱</div>
+            <div class="feature-text">
+              <h4>Mobile-Friendly Design</h4>
+              <p>Access our full platform seamlessly from any device — desktop, tablet, or smartphone.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:2rem;" class="fade-in">
+          <a href="about.html" class="btn-primary" style="display:inline-flex;">Learn More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MAP PREVIEW ── -->
+  <section class="dark-section" id="map-preview">
+    <div class="section-header fade-in">
+      <div class="section-tag" style="color:var(--primary-light);">📍 GIS Feature</div>
+      <h2 class="section-title">Interactive Destination Map</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.6);">Click any marker to discover destination details, all powered by real-world geographic data.</p>
+    </div>
+    <div class="map-wrapper fade-in">
+      <div id="map"></div>
+      <div class="map-legend"></div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES TEASER ── -->
+  <section id="services-home">
+    <div class="section-header fade-in">
+      <div class="section-tag">🎯 What We Offer</div>
+      <h2 class="section-title">Travel Services & Tips</h2>
+      <p class="section-desc">Everything you need for a safe, enjoyable, and memorable travel experience.</p>
+    </div>
+    <div class="services-grid" style="--dark:var(--dark);--white:var(--white);">
+      <style>
+        #services-home .service-card { background: var(--white); border: 1.5px solid var(--light-2); }
+        #services-home .service-card:hover { background: rgba(10,124,92,0.05); border-color: var(--primary); }
+        #services-home .service-title { color: var(--dark) !important; }
+        #services-home .service-desc { color: var(--text-light) !important; }
+      </style>
+      <div class="service-card fade-in">
+        <div class="service-icon">🧭</div>
+        <h3 class="service-title">Guided Tours</h3>
+        <p class="service-desc">Expert-curated tour recommendations with step-by-step travel guides for each destination.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🛡️</div>
+        <h3 class="service-title">Safety Information</h3>
+        <p class="service-desc">Up-to-date safety tips, emergency contacts, and travel advisories for every region.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🌤️</div>
+        <h3 class="service-title">Best Travel Times</h3>
+        <p class="service-desc">Seasonal guides and climate information to help you plan your trips at the perfect time.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">💰</div>
+        <h3 class="service-title">Budget Planning</h3>
+        <p class="service-desc">Cost breakdowns and money-saving tips to help you travel more without spending more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand" style="margin-bottom:1rem;">
+          <span class="brand-icon">🗺️</span>
+          <span style="color:#fff;">Geo<span style="color:var(--primary-light);">Tour</span></span>
+        </div>
+        <p>Your GIS-powered travel companion. Explore, discover, and plan unforgettable journeys using interactive maps and rich destination data.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="destinations.html">National Parks</a></li>
+          <li><a href="destinations.html">Lakes & Rivers</a></li>
+          <li><a href="destinations.html">Cultural Sites</a></li>
+          <li><a href="destinations.html">Beaches</a></li>
+          <li><a href="destinations.html">Mountains</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@geotour.com">📧 info@geotour.com</a></li>
+          <li><a href="tel:+251900000000">📞 +251 900 000 000</a></li>
+          <li><a href="#">📍 Addis Ababa, Ethiopia</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GeoTour. Built with ❤️ using HTML, CSS & JavaScript | GIS-Based Tourism Project.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

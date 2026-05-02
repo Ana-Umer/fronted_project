@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – GeoTour</title>
+  <meta name="description" content="Travel tips, guided tour recommendations, safety information, and budget planning — everything you need for a great trip with GeoTour." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>" />
+  <style>
+    .tip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem; max-width: 1200px; margin: 0 auto;
+    }
+    .tip-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 2rem; box-shadow: var(--shadow);
+      border-left: 4px solid var(--primary);
+      transition: var(--transition);
+    }
+    .tip-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-left-color: var(--secondary); }
+    .tip-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px; }
+    .tip-card p { color: var(--text-light); font-size: 0.92rem; line-height: 1.7; }
+    .tip-card ul { margin-top: 0.75rem; padding-left: 1.25rem; list-style: disc; }
+    .tip-card ul li { color: var(--text-light); font-size: 0.88rem; margin-bottom: 0.4rem; line-height: 1.6; }
+
+    .safety-banner {
+      background: linear-gradient(135deg, #fef3c7, #fde68a);
+      border: 1.5px solid #f59e0b;
+      border-radius: var(--radius);
+      padding: 2rem 2.5rem;
+      max-width: 1100px; margin: 0 auto 3rem;
+      display: flex; align-items: center; gap: 1.5rem;
+    }
+    .safety-banner .icon { font-size: 2.5rem; }
+    .safety-banner h3 { font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.3rem; }
+    .safety-banner p { color: var(--text); font-size: 0.92rem; }
+
+    .guide-steps {
+      max-width: 800px; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 1.5rem;
+    }
+    .guide-step {
+      display: flex; gap: 1.5rem; align-items: flex-start;
+      background: var(--white); border-radius: var(--radius);
+      padding: 1.5rem 2rem; box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .guide-step:hover { transform: translateX(8px); box-shadow: var(--shadow-lg); }
+    .step-number {
+      min-width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; font-weight: 800; color: var(--white);
+    }
+    .step-content h4 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+    .step-content p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">🗺️</span>
+      <span>Geo<span>Tour</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Services</div>
+    <h1>Travel Services & Tips</h1>
+    <p>Your comprehensive guide to safe, affordable, and unforgettable travel experiences across all destinations.</p>
+  </div>
+
+  <!-- ── SERVICES ── -->
+  <section class="dark-section">
+    <div class="section-header fade-in">
+      <div class="section-tag" style="color:var(--primary-light);">🎯 Our Services</div>
+      <h2 class="section-title">What We Offer</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.6);">Everything you need to plan and enjoy your trips — from detailed guides to safety information.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">🧭</div>
+        <h3 class="service-title">Guided Tour Recommendations</h3>
+        <p class="service-desc">Expert-curated itineraries and step-by-step travel guides for each destination, including best routes, must-see spots, and time estimates.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🛡️</div>
+        <h3 class="service-title">Safety Information</h3>
+        <p class="service-desc">Up-to-date safety tips, emergency contacts, health precautions, and travel advisories for every region and destination we cover.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🌤️</div>
+        <h3 class="service-title">Best Travel Times</h3>
+        <p class="service-desc">Seasonal guides showing the ideal months to visit each destination based on weather, wildlife migrations, and crowd levels.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">💰</div>
+        <h3 class="service-title">Budget Planning</h3>
+        <p class="service-desc">Detailed cost breakdowns for accommodation, transport, food, and activities — plus money-saving tips for budget travelers.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🗺️</div>
+        <h3 class="service-title">GIS Map Navigation</h3>
+        <p class="service-desc">Interactive maps with precise GPS coordinates, distance calculations, and turn-by-turn visual guidance to every destination.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">📸</div>
+        <h3 class="service-title">Photography Spots</h3>
+        <p class="service-desc">Curated photography locations at each destination with tips on best lighting times, angles, and recommended gear.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRAVEL TIPS ── -->
+  <section>
+    <div class="section-header fade-in">
+      <div class="section-tag">💡 Travel Tips</div>
+      <h2 class="section-title">Essential Travel Advice</h2>
+      <p class="section-desc">Practical tips to help you make the most of every journey.</p>
+    </div>
+
+    <div class="safety-banner fade-in">
+      <div class="icon">⚠️</div>
+      <div>
+        <h3>Travel Safety First</h3>
+        <p>Always register with your country's embassy, share your itinerary with family, and keep digital copies of important documents stored securely in the cloud.</p>
+      </div>
+    </div>
+
+    <div class="tip-grid">
+      <div class="tip-card fade-in">
+        <h3>🎒 Packing Essentials</h3>
+        <p>Pack smart and light for a hassle-free trip:</p>
+        <ul>
+          <li>Versatile, quick-dry clothing layers</li>
+          <li>Universal power adapter and power bank</li>
+          <li>First-aid kit with personal medications</li>
+          <li>Waterproof bag for electronics</li>
+          <li>Copies of passport and travel insurance</li>
+        </ul>
+      </div>
+      <div class="tip-card fade-in">
+        <h3>🏥 Health & Safety</h3>
+        <p>Stay healthy and safe during your travels:</p>
+        <ul>
+          <li>Get recommended vaccinations before travel</li>
+          <li>Carry mosquito repellent in tropical areas</li>
+          <li>Drink only bottled or purified water</li>
+          <li>Keep emergency numbers saved offline</li>
+          <li>Purchase comprehensive travel insurance</li>
+        </ul>
+      </div>
+      <div class="tip-card fade-in">
+        <h3>💳 Money Tips</h3>
+        <p>Manage your finances wisely abroad:</p>
+        <ul>
+          <li>Notify your bank of travel dates</li>
+          <li>Carry some local currency for small expenses</li>
+          <li>Use ATMs inside banks for better security</li>
+          <li>Keep backup payment cards in separate bags</li>
+          <li>Negotiate prices politely at local markets</li>
+        </ul>
+      </div>
+      <div class="tip-card fade-in">
+        <h3>📱 Tech & Connectivity</h3>
+        <p>Stay connected while exploring:</p>
+        <ul>
+          <li>Download offline maps before your trip</li>
+          <li>Buy local SIM cards for affordable data</li>
+          <li>Use translation apps for language barriers</li>
+          <li>Back up photos to cloud storage daily</li>
+          <li>Carry a portable Wi-Fi hotspot if needed</li>
+        </ul>
+      </div>
+      <div class="tip-card fade-in">
+        <h3>🌿 Eco-Tourism</h3>
+        <p>Travel responsibly and protect nature:</p>
+        <ul>
+          <li>Follow "Leave No Trace" principles</li>
+          <li>Avoid single-use plastics — bring reusables</li>
+          <li>Stay on marked trails in natural areas</li>
+          <li>Support local businesses and guides</li>
+          <li>Never feed or disturb wildlife</li>
+        </ul>
+      </div>
+      <div class="tip-card fade-in">
+        <h3>🗣️ Cultural Etiquette</h3>
+        <p>Respect local customs and cultures:</p>
+        <ul>
+          <li>Learn basic phrases in the local language</li>
+          <li>Dress modestly when visiting sacred sites</li>
+          <li>Ask permission before photographing people</li>
+          <li>Observe local dining and greeting customs</li>
+          <li>Tip appropriately based on local standards</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PLANNING GUIDE ── -->
+  <section style="background: var(--light);">
+    <div class="section-header fade-in">
+      <div class="section-tag">📋 Step-by-Step</div>
+      <h2 class="section-title">Your Trip Planning Guide</h2>
+      <p class="section-desc">Follow these steps to plan a smooth and memorable trip from start to finish.</p>
+    </div>
+    <div class="guide-steps">
+      <div class="guide-step fade-in">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h4>Choose Your Destination</h4>
+          <p>Browse our destinations page and interactive map to discover places that match your interests — adventure, culture, or relaxation.</p>
+        </div>
+      </div>
+      <div class="guide-step fade-in">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h4>Check Best Travel Times</h4>
+          <p>Review our seasonal guides to pick the ideal time for your visit based on weather, events, and crowd levels.</p>
+        </div>
+      </div>
+      <div class="guide-step fade-in">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h4>Plan Your Budget</h4>
+          <p>Use our cost breakdowns to estimate expenses for transport, accommodation, food, and activities at your chosen destination.</p>
+        </div>
+      </div>
+      <div class="guide-step fade-in">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h4>Review Safety Information</h4>
+          <p>Read safety tips, health precautions, and any travel advisories for your destination before departure.</p>
+        </div>
+      </div>
+      <div class="guide-step fade-in">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h4>Pack and Go!</h4>
+          <p>Use our packing checklist, download offline maps, and set out on your adventure with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand" style="margin-bottom:1rem;">
+          <span class="brand-icon">🗺️</span>
+          <span style="color:#fff;">Geo<span style="color:var(--primary-light);">Tour</span></span>
+        </div>
+        <p>Your GIS-powered travel companion. Explore, discover, and plan unforgettable journeys.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">🧭 Guided Tours</a></li>
+          <li><a href="#">🛡️ Safety Info</a></li>
+          <li><a href="#">🌤️ Best Times</a></li>
+          <li><a href="#">💰 Budget Tips</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@geotour.com">📧 info@geotour.com</a></li>
+          <li><a href="tel:+251900000000">📞 +251 900 000 000</a></li>
+          <li><a href="#">📍 Addis Ababa, Ethiopia</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GeoTour. Built with ❤️ using HTML, CSS & JavaScript | GIS-Based Tourism Project.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

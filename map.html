@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Map – GeoTour</title>
+  <meta name="description" content="Explore tourist destinations on GeoTour's interactive GIS map — click markers to discover location details, categories, and travel information." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>" />
+  <style>
+    #map { height: 580px; }
+    .map-controls {
+      display: flex; flex-wrap: wrap; gap: 0.75rem;
+      justify-content: center; margin-bottom: 1.5rem;
+    }
+    .map-control-btn {
+      padding: 8px 18px;
+      background: var(--white); border: 1.5px solid var(--light-2);
+      border-radius: 50px; font-size: 0.88rem; font-weight: 600;
+      color: var(--text); cursor: pointer; transition: var(--transition);
+    }
+    .map-control-btn:hover { background: var(--primary); color: var(--white); border-color: var(--primary); }
+    .map-info-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem; max-width: 1200px; margin: 2rem auto 0;
+    }
+    .map-info-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 1.25rem; box-shadow: var(--shadow);
+      display: flex; align-items: center; gap: 1rem;
+      transition: var(--transition);
+    }
+    .map-info-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .map-info-dot {
+      width: 16px; height: 16px; min-width: 16px;
+      border-radius: 50%; flex-shrink: 0;
+    }
+    .map-info-text h4 { font-size: 0.9rem; font-weight: 700; color: var(--dark); }
+    .map-info-text p { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">🗺️</span>
+      <span>Geo<span>Tour</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="map.html" class="active">Map</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Map</div>
+    <h1>Interactive GIS Map</h1>
+    <p>Explore all tourist destinations on our live map. Click any marker to view details about the location.</p>
+  </div>
+
+  <!-- ── MAP SECTION ── -->
+  <section class="dark-section">
+    <div class="map-wrapper">
+      <div class="section-header fade-in">
+        <div class="section-tag" style="color:var(--primary-light);">📍 GIS Technology</div>
+        <h2 class="section-title">Tourist Destination Map</h2>
+        <p class="section-desc" style="color:rgba(255,255,255,0.6);">All markers represent real geographic coordinates. Click a marker to open its info popup.</p>
+      </div>
+
+      <div class="map-controls fade-in">
+        <button class="map-control-btn" onclick="map && map.setView([9.1450, 40.4897], 5)">🌍 Reset View</button>
+        <button class="map-control-btn" onclick="map && map.setView([13.1492, 38.0371], 9)">🏔️ Simien Mountains</button>
+        <button class="map-control-btn" onclick="map && map.setView([12.0315, 39.0411], 12)">🏛️ Lalibela</button>
+        <button class="map-control-btn" onclick="map && map.setView([14.2417, 40.3000], 8)">🌋 Danakil</button>
+        <button class="map-control-btn" onclick="map && map.setView([12.0000, 37.3000], 9)">💧 Lake Tana</button>
+      </div>
+
+      <div id="map" class="fade-in"></div>
+      <div class="map-legend fade-in" style="margin-top:1.5rem;"></div>
+    </div>
+  </section>
+
+  <!-- ── QUICK LOCATION CARDS ── -->
+  <section>
+    <div class="section-header fade-in">
+      <div class="section-tag">📌 All Locations</div>
+      <h2 class="section-title">Mapped Destinations</h2>
+      <p class="section-desc">Overview of all tourist locations featured on our GIS map with their geographic coordinates.</p>
+    </div>
+    <div class="map-info-cards">
+      <div class="map-info-card fade-in">
+        <div class="map-info-dot" style="background:#ef4444;"></div>
+        <div class="map-info-text">
+          <h4>Simien Mountains</h4>
+          <p>13.1492°, 38.0371° | Mountain</p>
+        </div>
+      </div>
+      <div class="map-info-card fade-in">
+        <div class="map-info-dot" style="background:#06b6d4;"></div>
+        <div class="map-info-text">
+          <h4>Lake Tana</h4>
+          <p>12.0000°, 37.3000° | Lake</p>
+        </div>
+      </div>
+      <div class="map-info-card fade-in">
+        <div class="map-info-dot" style="background:#0a7c5c;"></div>
+        <div class="map-info-text">
+          <h4>Omo Valley</h4>
+          <p>5.8647°, 35.6033° | Park</p>
+        </div>
+      </div>
+      <div class="map-info-card fade-in">
+        <div class="map-info-dot" style="background:#f59e0b;"></div>
+        <div class="map-info-text">
+          <h4>Lalibela Churches</h4>
+          <p>12.0315°, 39.0411° | Cultural</p>
+        </div>
+      </div>
+      <div class="map-info-card fade-in">
+        <div class="map-info-dot" style="background:#0a7c5c;"></div>
+        <div class="map-info-text">
+          <h4>Danakil Depression</h4>
+          <p>14.2417°, 40.3000° | Park</p>
+        </div>
+      </div>
+      <div class="map-info-card fade-in">
+        <div class="map-info-dot" style="background:#8b5cf6;"></div>
+        <div class="map-info-text">
+          <h4>Langano Beach</h4>
+          <p>7.6000°, 38.7167° | Beach</p>
+        </div>
+      </div>
+      <div class="map-info-card fade-in">
+        <div class="map-info-dot" style="background:#ef4444;"></div>
+        <div class="map-info-text">
+          <h4>Bale Mountains</h4>
+          <p>6.8833°, 39.8167° | Mountain</p>
+        </div>
+      </div>
+      <div class="map-info-card fade-in">
+        <div class="map-info-dot" style="background:#f59e0b;"></div>
+        <div class="map-info-text">
+          <h4>Fasil Ghebbi, Gondar</h4>
+          <p>12.6075°, 37.4697° | Cultural</p>
+        </div>
+      </div>
+      <div class="map-info-card fade-in">
+        <div class="map-info-dot" style="background:#0a7c5c;"></div>
+        <div class="map-info-text">
+          <h4>Sof Omar Cave</h4>
+          <p>6.9038°, 40.7511° | Park</p>
+        </div>
+      </div>
+      <div class="map-info-card fade-in">
+        <div class="map-info-dot" style="background:#ef4444;"></div>
+        <div class="map-info-text">
+          <h4>Gara Muleta</h4>
+          <p>9.2500°, 41.7333° | Mountain</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand" style="margin-bottom:1rem;">
+          <span class="brand-icon">🗺️</span>
+          <span style="color:#fff;">Geo<span style="color:var(--primary-light);">Tour</span></span>
+        </div>
+        <p>Your GIS-powered travel companion. Explore, discover, and plan unforgettable journeys.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Map Features</h4>
+        <ul>
+          <li><a href="#">📍 Location Markers</a></li>
+          <li><a href="#">🗂️ Category Filters</a></li>
+          <li><a href="#">📋 Info Popups</a></li>
+          <li><a href="#">🔍 Zoom Controls</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@geotour.com">📧 info@geotour.com</a></li>
+          <li><a href="tel:+251900000000">📞 +251 900 000 000</a></li>
+          <li><a href="#">📍 Addis Ababa, Ethiopia</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GeoTour. Built with ❤️ using HTML, CSS & JavaScript | GIS-Based Tourism Project.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // expose map globally for control buttons
+    window.addEventListener('leafletReady', () => { window.map = window._leafletMap; });
+  </script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – GeoTour</title>
+  <meta name="description" content="Learn about GeoTour – a GIS-based tourism information project built to help travelers explore destinations through interactive maps and rich travel content." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>" />
+  <style>
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem; max-width: 1100px; margin: 0 auto;
+    }
+    .mission-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 2rem; text-align: center; box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .mission-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .mission-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .mission-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.6rem; }
+    .mission-card p { color: var(--text-light); font-size: 0.9rem; line-height: 1.7; }
+
+    .timeline { max-width: 700px; margin: 0 auto; position: relative; }
+    .timeline::before {
+      content: ''; position: absolute; left: 24px; top: 0; bottom: 0;
+      width: 2px; background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+    }
+    .timeline-item { display: flex; gap: 1.5rem; margin-bottom: 2rem; position: relative; }
+    .timeline-dot {
+      min-width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; box-shadow: 0 4px 14px rgba(10,124,92,0.35); z-index: 1;
+    }
+    .timeline-content { background: var(--white); border-radius: var(--radius); padding: 1.25rem 1.5rem; box-shadow: var(--shadow); flex: 1; }
+    .timeline-content h4 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+    .timeline-content p { font-size: 0.88rem; color: var(--text-light); }
+    .timeline-date { font-size: 0.75rem; color: var(--primary); font-weight: 600; margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">🗺️</span>
+      <span>Geo<span>Tour</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> About</div>
+    <h1>About GeoTour</h1>
+    <p>We're on a mission to make travel exploration smarter, more accessible, and more immersive using GIS technology.</p>
+  </div>
+
+  <!-- ── MISSION ── -->
+  <section>
+    <div class="section-header fade-in">
+      <div class="section-tag">🎯 Our Mission</div>
+      <h2 class="section-title">Why We Built GeoTour</h2>
+      <p class="section-desc">GeoTour was created to bridge the gap between geographic data and tourism information, making destination discovery easier for everyone.</p>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-card fade-in">
+        <div class="mission-icon">🗺️</div>
+        <h3>GIS Integration</h3>
+        <p>We use Geographic Information System technology to provide precise location data, interactive maps, and spatial analysis for every destination.</p>
+      </div>
+      <div class="mission-card fade-in">
+        <div class="mission-icon">🌍</div>
+        <h3>Global Coverage</h3>
+        <p>From local hidden gems to world-famous landmarks — GeoTour covers destinations across all continents and cultures.</p>
+      </div>
+      <div class="mission-card fade-in">
+        <div class="mission-icon">📱</div>
+        <h3>Responsive & Accessible</h3>
+        <p>Designed mobile-first to ensure every traveler can access information anywhere, on any device.</p>
+      </div>
+      <div class="mission-card fade-in">
+        <div class="mission-icon">🔒</div>
+        <h3>Reliable Information</h3>
+        <p>Our team carefully curates and verifies all destination data, safety tips, and travel guides you find on our platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECT OBJECTIVES ── -->
+  <section style="background: var(--dark);">
+    <div class="section-header fade-in">
+      <div class="section-tag" style="color:var(--primary-light);">📋 Project Objectives</div>
+      <h2 class="section-title" style="color:var(--white);">What This Project Achieves</h2>
+    </div>
+    <div class="timeline fade-in">
+      <div class="timeline-item">
+        <div class="timeline-dot">📍</div>
+        <div class="timeline-content">
+          <div class="timeline-date">Objective 01</div>
+          <h4>Detailed Destination Information</h4>
+          <p>Provide comprehensive information about tourist destinations including descriptions, images, categories, and visitor tips.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">🗺️</div>
+        <div class="timeline-content">
+          <div class="timeline-date">Objective 02</div>
+          <h4>GIS-Based Map Display</h4>
+          <p>Show geographic locations on interactive maps using Leaflet.js — a core GIS concept applied in real-world tourism.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">📱</div>
+        <div class="timeline-content">
+          <div class="timeline-date">Objective 03</div>
+          <h4>Responsive Web Design</h4>
+          <p>Create a fully responsive, mobile-friendly website that works flawlessly across all screen sizes and browsers.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">⚡</div>
+        <div class="timeline-content">
+          <div class="timeline-date">Objective 04</div>
+          <h4>JavaScript Interactivity</h4>
+          <p>Implement dynamic features — map markers, form validation, scroll animations, and destination filters — using vanilla JavaScript.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">🎓</div>
+        <div class="timeline-content">
+          <div class="timeline-date">Objective 05</div>
+          <h4>Real-World Application</h4>
+          <p>Apply HTML, CSS, and JavaScript skills in a real-world tourism project that demonstrates practical software development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TEAM ── -->
+  <section>
+    <div class="section-header fade-in">
+      <div class="section-tag">👥 Our Team</div>
+      <h2 class="section-title">Meet the Project Team</h2>
+      <p class="section-desc">A talented group of students working collaboratively to bring GeoTour to life.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card fade-in">
+        <div class="team-avatar">👩‍💼</div>
+        <h3>Abdulkerim Temem</h3>
+        <div class="role">Project Manager</div>
+        <p>Coordinates the team, manages timelines, and ensures the project meets all requirements and deadlines.</p>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar">🎨</div>
+        <h3>Shaule Abera</h3>
+        <div class="role">UI/UX Designer</div>
+        <p>Designs the visual layout, color schemes, user interface mockups, and ensures great user experience.</p>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar">💻</div>
+        <h3>Obsa  Mohammed</h3>
+        <div class="role">Frontend Developer</div>
+        <p>Builds the website using HTML, CSS, and JavaScript, implementing all design and functionality requirements.</p>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar">✍️</div>
+        <h3>Mured Abdi</h3>
+        <div class="role">Content Manager</div>
+        <p>Prepares all tourism text content, destination descriptions, images, and informational material.</p>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar">🔍</div>
+        <h3>Abdeta Jundi</h3>
+        <div class="role">QA Tester</div>
+        <p>Tests the system for bugs, validates functionality, ensures cross-browser compatibility and responsiveness.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand" style="margin-bottom:1rem;">
+          <span class="brand-icon">🗺️</span>
+          <span style="color:#fff;">Geo<span style="color:var(--primary-light);">Tour</span></span>
+        </div>
+        <p>Your GIS-powered travel companion. Explore, discover, and plan unforgettable journeys.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Team Roles</h4>
+        <ul>
+          <li><a href="#">Project Manager</a></li>
+          <li><a href="#">UI/UX Designer</a></li>
+          <li><a href="#">Frontend Developer</a></li>
+          <li><a href="#">Content Manager</a></li>
+          <li><a href="#">QA Tester</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@geotour.com">📧 info@geotour.com</a></li>
+          <li><a href="tel:+251900000000">📞 +251 900 000 000</a></li>
+          <li><a href="#">📍 Addis Ababa, Ethiopia</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GeoTour. Built with ❤️ using HTML, CSS & JavaScript | GIS-Based Tourism Project.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
