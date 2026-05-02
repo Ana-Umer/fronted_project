@@ -68,15 +68,6 @@ Since this is a fully static website without a backend database, running it loca
 
 ---
 
-## 👥 Meet the Team
-
-This project was built collaboratively to demonstrate the practical application of web development and GIS concepts:
-
-- **Abdulkerim Temem** – Project Manager
-- **Shaule Abera** – UI/UX Designer
-- **Obsa Mohammed** – Frontend Developer
-- **Mured Abdi** – Content Manager
-- **Abdeta Jundi** – QA Tester
 
 ---
 
